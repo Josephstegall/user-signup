@@ -34,7 +34,7 @@ def signup():
         if password != verify:
             flash('Check your verification for typos!','error')
             return render_template ('indexhome.html',username=username, email=email)
-        if email != "" and (email_verification) or (period_verification) not in email:
+        if email != "" and (email_verification) and (period_verification) not in email:
             flash ('Enter valid email with @ and a period!','error')
             return render_template ('indexhome.html',username=username, email=email)
         
